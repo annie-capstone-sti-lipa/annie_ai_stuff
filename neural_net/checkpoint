@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/jerome/code/python/intention_recognition/neural_net/model.tflearn"
+all_model_checkpoint_paths: "/home/jerome/code/python/intention_recognition/neural_net/model.tflearn"
