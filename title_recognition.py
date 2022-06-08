@@ -10,7 +10,7 @@ import nltk
 stemmer = LancasterStemmer()
 
 
-with open("intention.json") as file:
-    dataset = json.load(file)
+with open("anime_titles.json") as file:
+    titles = json.load(file)
 
-print(dataset)
+print(titles)
