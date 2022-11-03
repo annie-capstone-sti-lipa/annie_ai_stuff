@@ -57,7 +57,7 @@ def get_anime_list(offset=0, count=0):
 
 
 def write_data():
-    with open("anime_tits.json", "w", encoding="utf8") as outfile:
+    with open("anime_titles.json", "w", encoding="utf8") as outfile:
         json.dump(data_set, outfile)
 
     print("\n\n\nDONEZO!\n\n\n")
