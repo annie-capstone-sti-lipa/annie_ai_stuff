@@ -6,7 +6,7 @@ data_set = []
 
 
 def clean(text):
-    return re.sub('[^A-Za-z0-9 ]+', " ", remove_special(text)).lower()
+    return re.sub('[^A-Za-z0-9 ]+', "", remove_special(text)).lower()
 
 
 def remove_special(text):
@@ -45,7 +45,7 @@ def get_anime_list(offset=0, count=0):
 
         alternative = list(filter(None, [a for a in alternative if a.strip()]))
 
-        temp_data = {"title": remove_special(
+        temp_data = {"title": clean(
             node["title"]), "alternative": alternative}
 
         count += len(temp_data["alternative"])
@@ -64,7 +64,7 @@ def write_data():
 
 
 count = 0
-for _ in range(15):
+for _ in range(25):
     count = get_anime_list(offset=len(data_set), count=count)
 
 print(count)
